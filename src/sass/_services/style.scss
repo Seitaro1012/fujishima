@@ -1,0 +1,72 @@
+@use '../config' as *;
+@use '../mixin' as *;
+
+.fk-services__image01 {
+  text-align: center;
+  @include mq-up(){
+    max-width: vwpc(1000);
+    margin: 0 auto;
+  }
+}
+.fk-section .fk-image-1{
+  @include mq-up{
+    margin-top: vwpc(118);
+  }
+  @include mq-down{
+    margin-top: vw(32);
+  }
+}
+.fk-section__services-1{
+  @include mq-up(){
+    padding-bottom:vwpc(380);
+  }
+  @include mq-down(){
+    padding-bottom:vw(100);
+  }
+}
+.fk-section__services-2{
+  @include mq-up(){
+    padding-bottom:vwpc(500);
+  }
+  @include mq-down(){
+    padding-bottom:vw(100);
+  }
+}
+.fk-section__services-3{
+  background: url("/assets/images/bg_obje01.png") no-repeat right 35%/73%;
+  @include mq-up(){
+    padding-bottom:vwpc(500);
+  }
+  @include mq-down(){
+    padding-bottom:vw(100);
+    background: url("/assets/images/bg_obje01.png") no-repeat right 71%/83%;
+  }
+}
+.fk-section__services-4{
+  @include mq-up(){
+    padding-bottom:vwpc(400);
+  }
+  @include mq-down(){
+    padding-bottom:vw(100);
+  }
+}
+.fk-section__services-5{
+  background: url("/assets/images/bg_obje02.png") no-repeat left 55%/77%;
+  @include mq-up(){
+    padding-bottom:vwpc(130);
+  }
+  @include mq-down(){
+    padding-bottom:vw(100);
+    background: url("/assets/images/bg_obje02.png") no-repeat left 51%/88%;
+  }
+}
+.fk-vision__textArea + .fk-button-1{
+  @include mq-up(){
+    margin-top:vwpc(150);
+  }
+  @include mq-down(){
+    margin-top:vw(84);
+  }
+}
+
+

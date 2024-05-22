@@ -1,0 +1,14 @@
+@use '../config' as *;
+@use '../mixin' as *;
+
+.fk-section__greeting-1{
+  .fk-button-1{
+    margin-top :vwpc(120);
+    @include mq-up(){
+      margin-top :rem(120);
+    }
+    @include mq-down(){
+      margin-top :vw(56);
+    }
+  }
+}

@@ -1,0 +1,398 @@
+@use '_config' as *;
+@use '_mixin' as *;
+// ヘッダーフッター
+
+// #fk-header-js{
+//   @include mq-up(){
+//     height: vwpc(110);
+//   }
+//   @include mq-max(){
+//     height: rem(110);
+//   }
+//   @include mq-down(){
+//     height: vw(40);
+//   }
+// }
+// .fk-header{
+//   display: flex;
+//   justify-content: space-between;
+//   align-items:flex-end;
+//   background: $base-color-white;
+//   @include mq-up(){
+//     height: vwpc(110);
+//     padding:0 vwpc(80) vwpc(10) vwpc(48);
+//   }
+//   @include mq-max(){
+//     height: rem(110);
+//     padding:0 rem(80) rem(10) rem(48);
+//   }
+//   @include mq-down(){
+//     height: vw(40);
+//     padding: vw(16) vw(16) 0;
+//   }
+
+//   &__logo{
+//     @include mq-up(){
+//       width:vwpc(250);
+//       padding: 0 0 vwpc(8);
+//     }
+//     @include mq-max(){
+//       width:rem(250);
+//       padding: 0 0 rem(8);
+//     }
+//     @include mq-down(){
+//       width:vw(114);
+//       padding: 0 0 ;
+//       img{
+//         vertical-align:baseline;
+//       }
+//     }
+//   }
+//   &__navList{
+//     display:flex;
+//     justify-content: space-between;
+//      li{
+//        width: vwpc(224);
+//        @include mq-max(){
+//          width: rem(224);
+        
+//        }
+//        a {
+//         margin: 0 auto;
+//         display: block;
+//         width:fit-content;
+//         text-align: center;
+//         padding: vwpc(16) 0 vwpc(8);
+//         @include mq-max(){
+//           padding: rem(16) 0 rem(8);
+
+//         }
+//       }
+//     }
+//     @include mq-down(){
+//       display: none;
+//     }
+//   }
+// }
+
+// .fk-mobile-menu-icon {
+//   @include mq-up(){
+//     display: none;
+//   }
+//   position: absolute;
+//   top:vw(16);
+//   right:vw(16);
+//   z-index: 20;
+//   & > span {
+//     background-color: black;
+//     width: vw(24);
+//     height: 1px;
+//     display: block;
+//     margin-bottom: vw(8);
+//     transition: transform .7s;
+//     &:last-child {
+//       margin-bottom: 0;
+//     }
+//   }
+//   &.js-open {
+//     & > span {
+//       background: $base-color-white;
+//       &:nth-child(1) {
+//         transition-delay: 70ms;
+//         transform: translateY(vw(9)) rotate(135deg);
+//       }
+//       &:nth-child(2) {
+//         transition-delay: 0s;
+//         transform: translateX(vw(-16)) scaleX(0);
+//       }
+//       &:nth-child(3) {
+//         transition-delay: 140ms;
+//         transform: translateY(vw(-9)) rotate(-135deg);
+//       }
+//     }
+//   }
+// }
+
+// body.js-overlay {
+//   overflow-y: hidden;
+// }
+
+// .fk-overlay {
+//   &.js-show {
+//     opacity: 1;
+//     pointer-events: auto;
+//   }
+//   @include mq-up(){
+//     display: none;
+//   }
+//   // display:block;
+//   color:$base-color-white;
+//   position: absolute;
+//   height: 100vh;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   // background: $base-color-blue;
+//   // text-align: center;
+//   padding: vh(24) vh(24) vh(40);
+//   opacity: 0;
+//   pointer-events: none;
+//   transition: opacity .3s ease-in;
+//   z-index:18;
+//   display: flex;
+//   flex-direction:column;
+//   align-items: center;
+//   justify-content: space-between;
+//   &__header{
+//     margin-top: vh(56);
+//     display: flex;
+//     flex-direction:column;
+//     align-items: center;
+//     &Logo{
+//       width: vh(112);
+//       margin-bottom: vh(14);
+//     }
+//     &Address{
+//       font-weight: 400;
+//       font-size: vh(8);
+//       margin-bottom: vh(19);
+//     }
+//     &SnsIcons{
+//       display: flex;
+//       gap: vh(16);
+//       & li {
+//         width:vh(16);
+//       }
+//     }
+//   }
+//   &__navList{
+//     display: flex;
+//     flex-direction: column;
+//     font-size:vh(14);
+//     gap:vh(30);
+    
+//   }
+//   &__copyright{
+//     font-family: roboto;
+//     font-size: vh(12);
+//     font-weight: 300;
+//   }
+
+// }
+
+
+
+// .fk-footer {
+//   color: $base-color-white;
+//   // background: $base-color-blue;
+//   font-weight: 400;
+//   position: relative;
+//   @include mq-up(){
+//     font-size: vwpc(18);
+//   }
+//   @include mq-max(){
+//     font-size: rem(18);
+//   }
+//   @include mq-down(){
+//     font-size: vw(16);
+//   }
+//   &__container{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     @include mq-up(){
+//       padding: vwpc(55) 0 vwpc(60);
+//       max-width: vwpc(1480);
+//       margin: 0 auto;
+//     }
+//     @include mq-max(){
+//       padding: rem(55) 0 rem(60);
+//       max-width: rem(1480);
+//     }
+//     @include mq-down(){
+//       flex-direction: column;
+//       padding: vw(52) vw(36) vw(150);
+//     }
+//   }
+//   &__addressArea{
+//     width: vwpc(300);
+//     @include mq-max(){
+//       width: rem(300);
+
+//     }
+//     @include mq-down(){
+//       text-align: center;
+//       width: 100%;
+//     }
+
+//   }
+//   &__logo{
+//     @include mq-up(){
+//       width:vwpc(250);
+//       margin-bottom: vwpc(40);
+//     }
+//     @include mq-max(){
+//       width:rem(250);
+//       margin-bottom: rem(40);
+//     }
+//     @include mq-down(){
+//       width:vw(112);
+//       margin: 0 auto vw(16);
+//     }
+//   }
+//   &__address{
+//     margin-bottom: vwpc(40);
+//     @include mq-max(){
+//       margin-bottom: rem(40);
+
+//     }
+//     @include mq-down(){
+//       font-size: vw(8);
+//       margin-bottom: vw(50);
+
+//     }
+
+//   }
+//   @include mq-down(){
+    
+//     &__copyright{
+//       font-size: vw(12);
+//      position: absolute;
+//      bottom:vw(40);
+//      left : 50%;
+//      transform: translateX(-50%); 
+//     }
+//   }
+//   &__mapWrap{
+//     max-width:vwpc(600);
+//     width:vwpc(600);
+//     @include mq-max(){
+//       max-width:rem(600);
+//       width:rem(600);
+//     }
+//     @include mq-down(){
+//       max-width:100%;
+//       width:100%;
+//     }
+//   }
+//   &__map{
+//     position: relative;
+//     width: 100%;
+//     height: 0;
+//     padding-top: 50%; /* 比率を2:1に固定 */
+//     @include mq-down(){
+//       padding-top: 62.5%; 
+//       margin-bottom: vw(50);
+//     }
+//       iframe {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+//   &__nav{
+//     @include mq-up(){
+//       width: vwpc(300);
+
+//     }
+//     @include mq-max(){
+//       width: rem(300);
+
+//     }
+//   }
+//   &__navList{
+//     display: flex;
+//     gap: vwpc(17);
+//     flex-direction: column;
+    
+//     @include mq-max(){
+//       gap: rem(17);
+      
+//     }
+//     @include mq-down(){
+
+//       gap: vw(30);
+
+//     }
+//   }
+    
+// }
+
+// メイン
+.fk-wrap {
+  max-width: rem(1920);
+}
+.fk-mainContent {
+  margin-top: vwpc(280);
+  @include mq-max(){
+    margin-top: rem(280);
+  }
+  @include mq-down() {
+    margin-top: vw(68);
+  }
+}
+.fk-container{
+  max-width: vwpc(1480);
+  margin: 0 auto;
+  @include mq-max(){
+    max-width: rem(1480);
+  }
+  @include mq-down() {
+    margin-left: vw(24);
+    margin-right: vw(24);
+  }
+}
+// .fk-inner{
+//   @include mq-up(){
+//     padding: 0 vwpc(40) 0 ;
+//   }
+//   @include mq-max(){
+//     padding: 0 rem(40) 0 ;
+//   }
+//   @include mq-down(){
+//     padding: 0 vw(8) 0 ;
+//   }
+// }
+// .fk-section {
+//   position: relative;
+//   &:nth-of-type(odd){
+//     &:before{
+//       content:"";
+//       position: absolute;
+//       background: url("/assets/images/wave01.png") no-repeat 0 0 / 100%;
+//       width: 100%;
+//       height: vwpc(280);
+//       top: vwpc(-270);
+//       @include mq-max(){
+//         // background-size: cover;
+//         height: rem(280);
+//         top: rem(-270);
+        
+//       }
+//     }
+    
+//   }
+//   &:nth-of-type(even){
+//     // background:$base-color-blue;
+//     &:before{
+//       content:"";
+//       position: absolute;
+//       background: url("/assets/images/wave02.png") no-repeat 0 0 / 100%;
+//       width: 100%;
+//       height: vwpc(280);
+//       top: vwpc(-270);
+//       @include mq-max(){
+//         // background-size: cover;
+//         height: rem(280);
+//         top: rem(-270);
+
+//       }
+      
+//     }
+//   }
+// }
+
+

@@ -1,0 +1,32 @@
+@use '_config' as *;
+
+body{
+  font-family: 'Noto Serif JP', 'Noto Sans JP', sans-serif;
+  font-size: vwpc(24);
+ 
+  @include mq-max(){
+    font-size: rem(24);
+  }
+
+
+  @include mq-down(){
+    font-size: vw(12);
+
+  }
+  line-height: 1.4366667;
+  color: $base-color-black;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,button{
+  transition: .3s;
+  &:hover{
+    opacity: 0.75;
+  }
+}
+

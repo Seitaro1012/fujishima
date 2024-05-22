@@ -1,0 +1,323 @@
+@use '../config' as *;
+@use '../mixin' as *;
+
+.top {
+  overflow-x: hidden;
+}
+.top main{
+  margin-top: 0;
+}
+.top #fk-header-js {
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+}
+.top .fk-header {
+  background: transparent;
+}
+.top .fk-footer{
+  &:before{
+    content:"";
+    position: absolute;
+    background: url("/assets/images/wave_light01.png") no-repeat 0 0 / 100%;
+    width: 100%;
+    height: vwpc(150);
+    top: vwpc(-140);
+    pointer-events: none;
+    @include mq-down(){
+      height: vw(35);
+      top: vw(-29);
+
+    }
+  }
+}
+.top .fk-section{
+  overflow: hidden;
+  &::before{
+    content:none;
+  }
+  @include mq-max(){
+    &:nth-of-type(odd){
+      .fk-container .fk-top-content{
+        margin-right:rem(220);
+        // margin-right: 0;
+      }
+    }
+    &:nth-of-type(even){
+      .fk-container .fk-top-content{
+        margin-left:rem(220);
+        // margin-right: 0;
+      }
+    }
+  }
+}
+.top .fk-container{
+  display:flex;
+  justify-content: space-between;
+  padding: vwpc(140) 0;
+  
+  //画像位置固定考慮
+  @include mq-max(){
+    max-width: rem(1920);
+    margin: 0 auto;
+    .fk-top-contentImage{
+      width: rem(740);
+      margin: 0;
+    }
+    .fk-top-content{
+      max-width: rem(740);
+      // margin-right:rem(220);  
+    }
+   
+  }
+  @include mq-down(){
+    flex-direction: column;
+    padding: vw(72) 0 0;
+  }
+}
+.fk-top-content{
+  width: 50%;
+  @include mq-down{
+    width: 100%;
+    margin-bottom: vw(64);
+  }
+}
+.top .fk-button-1 {
+  margin-top: vwpc(63);
+  @include mq-down(){
+    margin-top: vw(23);
+    width: vw(112);
+    font-size: vw(12);
+    padding: vw(4) vw(12);
+    line-height: 1.5;
+  }
+}
+.fk-top-inner{
+  padding-left: vwpc(40);
+}
+.fk-top-contentImage{
+  width: 100vw;
+  max-width: 50%;
+  margin: 0 calc(50% - 50vw) 0;
+  @include mq-down(){
+    max-width: inherit;
+  }
+}
+@include mq-up(){
+  .fk-section:nth-of-type(odd) .fk-top-contentImage{
+      order: -1;
+  }
+}
+.fk-top-contentImage img{
+  width: vwpc(800);
+  display: block;
+  @include mq-down(){
+    width: 100%;
+  }
+}
+
+.fk-heading-3 {
+  margin-top:1em;
+  &:first-of-type{
+    margin-top:0;
+  }
+}
+.fk-vision__content + .fk-button-1{
+  @include mq-up(){
+    margin-top:vwpc(150);
+  }
+}
+
+.fk-news-list{
+  margin-top: vwpc(71);
+  color: $base-color-white;
+  font-size:vwpc(24);
+  row-gap: vwpc(32);
+  display: flex;
+  flex-direction: column;
+  @include mq-down(){
+    row-gap: vw(37);
+    font-size:vw(12);
+  }
+  li a{
+    display: flex;
+    border-bottom:1px solid $base-color-white ;
+    position: relative;
+  }
+  .dt{
+    width: 25%;
+    text-align: center;
+  }
+  .dd{
+    width: 75%;
+    padding-right: vwpc(60);
+    @include mq-down(){
+      padding-right: vw(30);
+
+    }
+    &::after{
+      content:"→";
+      position: absolute;
+      right:vwpc(24);
+      top:0;
+      @include mq-down(){
+        right:vw(12);
+
+      }
+    }
+  }
+}
+
+.fk-top-online{
+  padding: vwpc(85) 0 vwpc(106);
+  @include mq-down{
+    padding: vw(40) 0;
+  }
+  & .fk-heading-1{
+    width:fit-content;
+    margin: 0 auto;
+    margin-bottom: vwpc(44);
+    @include mq-down{
+      margin-bottom: vw(22);
+    }
+  }
+  &__image{
+    @include mq-down{
+      margin-bottom: vw(40);
+    }
+    img{
+      width: 100%;
+    }
+  }
+  
+}
+
+.fk-top-mv {
+  height: vwpc(1080);
+  background: url('/assets/images/top_MV01.jpg') no-repeat 0 0 / cover;
+  position: relative;
+  @include mq-down(){
+    background: url('/assets/images/top_MV01sp.jpg') no-repeat 0 0 / 100%;
+    height:vw(640);
+  }
+  &Title{
+    position: relative;
+    z-index: 10;
+    padding-top:vwpc(320);
+    text-align: center;
+    margin-bottom: vwpc(210);
+    @include mq-down(){
+      padding-top:vw(240);
+      margin-bottom: vw(146);
+      &__subText{
+        margin-top: 0;
+      }
+    }
+    &__text{
+      margin-bottom:  vwpc(34);
+    }
+  }
+  &ScrollGuide{
+    width:fit-content;
+    margin: 0 auto;
+    text-align: center;
+    &:after{
+      content: '';
+      background: $base-color-white;
+      margin: vwpc(26) auto 0;
+      display: block;
+      height: vwpc(34);
+      width: vwpc(30);
+      clip-path: polygon(44% 0, 44% 80%, 0 60%, 0 75%, 50% 100%, 100% 75%, 100% 60%, 56% 80%, 56% 0);
+
+      animation-name: bounce;
+      transform-origin: center bottom;
+      animation-iteration-count: infinite;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+      @include mq-down(){
+        height: vw(16);
+        width: vw(16);
+        margin: vw(10) auto 0;
+      }
+    }
+    &__text{
+      width:vwpc(256);
+      @include mq-down{
+        width:vw(96);
+      }
+    }
+  }
+  &Side{
+    position: absolute;
+    width: vwpc(28);
+    top: vwpc(673);
+    left: vwpc(103);
+    @include mq-down(){
+      display: none;
+    }
+    &__text:after{
+      content: '';
+      display: block;
+      width: vwpc(50);
+      height: vwpc(50);
+      background: url('/assets/images/icon01.png') no-repeat 0 0 / 100%; 
+      margin-top: vwpc(22);
+      margin-left: vwpc(-14);
+
+    
+      }
+
+    
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+// スクロールガイドアニメーション
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-0.8em);}
+  60% {transform: translateY(-0.5em);}
+} 
+
+
+
+
+
+.fk-top-mvTitle__text {
+  letter-spacing: 3px;
+  @include mq-up() {
+    font-size: vwpc(120);
+  }
+  @include mq-max(){
+    font-size: rem(120);
+  }
+  @include mq-down() {
+    font-size: vw(40);
+  }
+}
+
+// オブジェクトを移動させるすアニメーション
+
+
+
+// .fk-section:first-of-type{
+//   background: url("/assets/images/wave_bg01.png") no-repeat 0 0 / 100%;
+//   @include mq-down {
+//     background-image: url("/assets/images/wave_bg01sp.png");
+//     background-position: 0 vw(5);
+//   }
+// }
+// .fk-section:nth-of-type(3){
+//   background: url("/assets/images/wave_bg02.png") no-repeat 0 0 / 100%;
+//   @include mq-down {
+//     background-image: url("/assets/images/wave_bg02sp.png");
+//     background-position: 0 vw(8);
+//   }
+// }
+
+
+

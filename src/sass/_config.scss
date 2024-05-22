@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+$base-color-yellow: #FADA89;
+// $base-color-gray: #E7E7E7;
+$base-color-white: #fff;
+$base-color-black: #0B1D26;
+
+// $sub-color-blue01: #1788A4;
+// $sub-color-blue02: #78C8DA;
+// $sub-color-black: #000;
+
+// bleakpoint
+$contents-width-xl: 1920;
+$contents-width-sm: 768;
+
+// PC
+$breakpoint-max: (
+  'xl': 'screen and (min-width: #{$contents-width-xl}px)',
+) !default;
+// タブ〜PC
+$breakpoint-up: (
+  'sm': 'screen and (min-width: #{$contents-width-sm}px)',
+) !default;
+// SP
+$breakpoint-down: (
+  'sm': 'screen and (max-width: #{$contents-width-sm - 1}px)',
+) !default;
+
+@mixin mq-max($breakpoint: xl) {
+  @media #{map-get($breakpoint-max, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq-up($breakpoint: sm) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: sm) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+
+// pxからvwに変換する
+@function vw($n) {
+  @return round(math.div($n, 393) * 100 * 100) * 0.01vw;
+}
+@function vh($n) {
+  @return round(math.div($n, 628) * 100 * 100) * 0.01vh;
+}
+@function vwpc($n) {
+  @return round(math.div($n, 1920) * 100 * 100) * 0.01vw;
+}
+
+@function rem($n) {
+  @return round(math.div($n, 16) * 100) * 0.01rem;
+}

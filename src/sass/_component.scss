@@ -1,0 +1,121 @@
+@use '_config' as *;
+
+/*--------
+heading
+---------*/
+
+.fk-heading{
+  // font-family: Noto Serif JP; 
+  &-1 {
+    font-weight: 700;
+    font-size: vwpc(48);
+    // line-height: 1.4375 ;
+    // line-height: 1.5;
+    @include mq-max(){
+      font-size: rem(48);
+    }     
+    @include mq-down() {
+      font-size: vw(18);
+    }
+  }
+  &__sub {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: vwpc(40);
+    line-height: 1.172;
+    color: $base-color-yellow;
+    @include mq-max(){
+      font-size: rem(40);
+    }
+    @include mq-down() {
+      font-size: vw(16);
+    }
+
+  }
+
+
+  &__noLine{
+    // オレンジラインなし
+  }
+  &Wrap {
+    text-align: center;
+    margin-bottom: vwpc(120);
+    @include mq-max(){
+      font-size: rem(120);
+    }
+    @include mq-down() {
+      font-size: vw(48);
+    }
+  }
+}
+
+/*--------
+text
+---------*/
+
+.fk-text{
+  &-1 {
+    font-weight: 700;
+    font-size: vwpc(24);
+    @include mq-max(){
+      font-size: rem(24);
+    }
+    @include mq-down() {
+      font-size: vw(12);
+    }
+    &+&{
+      margin-top:1em;
+    }
+  }
+  &-2 {
+    font-weight: 700;
+    font-size: vwpc(22);
+    @include mq-max(){
+      font-size: rem(22);
+    }
+    @include mq-down() {
+      font-size: vw(12);
+    }
+  }
+  &__sans{
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-size: vwpc(24);
+    line-height: 1.6667;
+    @include mq-max(){
+      font-size: rem(24);
+    }
+    @include mq-down() {
+      font-size: vw(12);
+    }
+  }
+  
+}
+
+/*--------
+button
+---------*/
+
+.fk-button{
+  &-1{
+    display: block;
+    font-weight:700;
+    background: $base-color-yellow;
+    width: fit-content;
+    @include mq-up(){
+      font-size: vwpc(24);
+      padding: vwpc(16) vwpc(104);
+    }
+    @include mq-max(){
+      font-size: rem(24);
+      padding: rem(16) rem(104);
+    }
+    @include mq-down(){
+      font-size: vw(12);
+      padding: vw(7.11) vw(35.49);
+    }
+  }
+  &__center{
+    margin: 0 auto;
+  }
+}

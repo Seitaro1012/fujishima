@@ -1,0 +1,20 @@
+@use '_config' as *;
+
+
+.hide {
+  display: none !important;
+}
+@include mq-up(){
+  .only-sp{
+    display: none;
+  }
+}
+@include mq-down(){
+  .only-pc{
+    display: none;
+  }
+}
+
+.mt2em {
+  margin-top: 2em !important;
+}

@@ -1,0 +1,79 @@
+.fk-services__image01 {
+  text-align: center;
+}
+
+.fk-section__services-3 {
+  background: url("/assets/images/bg_obje01.png") no-repeat right 35%/73%;
+}
+
+.fk-section__services-5 {
+  background: url("/assets/images/bg_obje02.png") no-repeat left 55%/77%;
+}
+
+@media screen and (min-width: 768px) {
+  .fk-services__image01 {
+    max-width: 52.08vw;
+    margin: 0 auto;
+  }
+
+  .fk-section .fk-image-1 {
+    margin-top: 6.15vw;
+  }
+
+  .fk-section__services-1 {
+    padding-bottom: 19.79vw;
+  }
+
+  .fk-section__services-2 {
+    padding-bottom: 26.04vw;
+  }
+
+  .fk-section__services-3 {
+    padding-bottom: 26.04vw;
+  }
+
+  .fk-section__services-4 {
+    padding-bottom: 20.83vw;
+  }
+
+  .fk-section__services-5 {
+    padding-bottom: 6.77vw;
+  }
+
+  .fk-vision__textArea + .fk-button-1 {
+    margin-top: 7.81vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fk-section .fk-image-1 {
+    margin-top: 8.14vw;
+  }
+
+  .fk-section__services-1 {
+    padding-bottom: 25.45vw;
+  }
+
+  .fk-section__services-2 {
+    padding-bottom: 25.45vw;
+  }
+
+  .fk-section__services-3 {
+    padding-bottom: 25.45vw;
+    background: url("/assets/images/bg_obje01.png") no-repeat right 71%/83%;
+  }
+
+  .fk-section__services-4 {
+    padding-bottom: 25.45vw;
+  }
+
+  .fk-section__services-5 {
+    padding-bottom: 25.45vw;
+    background: url("/assets/images/bg_obje02.png") no-repeat left 51%/88%;
+  }
+
+  .fk-vision__textArea + .fk-button-1 {
+    margin-top: 21.37vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
