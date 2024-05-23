@@ -468,6 +468,86 @@ button:hover {
   opacity: 0.75;
 }
 
+.fk-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  height: 8.54vw;
+  padding: 0 2.92vw 0.63vw 2.5vw;
+}
+
+.fk-header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 15.52vw;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fk-header__logoImage {
+  width: 5.21vw;
+}
+
+.fk-header__logoText {
+  width: 9.58vw;
+}
+
+.fk-header__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.fk-header__navList li {
+  font-size: 1.46vw;
+  width: 10.42vw;
+  margin-right: 1.56vw;
+  font-weight: 700;
+}
+
+.fk-header__navList li:last-child {
+  width: 16.67vw;
+  margin-right: 0;
+  margin-left: 3.13vw;
+}
+
+.fk-header__navList li a {
+  margin: 0 auto;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  padding: 0.83vw 0 0.42vw;
+}
+
+.fk-header__navList li a.fk-button__iconMail {
+  width: 100%;
+  margin: 0;
+  font-size: 1.46vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.83vw 2.5vw 0.83vw 2.71vw;
+}
+
 .fk-wrap {
   max-width: 120rem;
 }
@@ -545,6 +625,22 @@ button
   margin: 0 auto;
 }
 
+.fk-button__iconMail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.83vw 2.5vw 0.83vw 2.71vw;
+}
+
+.fk-button__iconMail:before {
+  content: "";
+  display: block;
+  background: url("/assets/images/icon01.png") no-repeat 0 0/100%;
+  width: 1.88vw;
+  height: 2.08vw;
+  margin-right: 0.1vw;
+}
+
 .hide {
   display: none !important;
 }
@@ -567,6 +663,36 @@ button
 @media screen and (min-width: 1920px) {
   body {
     font-size: 1.5rem;
+  }
+
+  .fk-header {
+    height: 10.25rem;
+    padding: 0 3.5rem 0.75rem 3rem;
+  }
+
+  .fk-header__logo {
+    width: 15.63rem;
+    padding: 0 0 0.5rem;
+  }
+
+  .fk-header__navList li {
+    font-size: 1.75rem;
+    width: 12.5rem;
+    margin-right: 1.88rem;
+  }
+
+  .fk-header__navList li:last-child {
+    width: 20rem;
+    margin-left: 3.75rem;
+  }
+
+  .fk-header__navList li a {
+    padding: 1rem 0 0.5rem;
+  }
+
+  .fk-header__navList li a.fk-button__iconMail {
+    font-size: 1.75rem;
+    padding: 1rem 3rem 1rem 3.25rem;
   }
 
   .fk-mainContent {
@@ -605,11 +731,33 @@ button
     font-size: 1.5rem;
     padding: 1rem 6.5rem;
   }
+
+  .fk-button__iconMail {
+    padding: 1rem 3rem 1rem 3.25rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
   body {
     font-size: 3.05vw;
+  }
+
+  .fk-header {
+    height: 10.18vw;
+    padding: 4.07vw 4.07vw 0;
+  }
+
+  .fk-header__logo {
+    width: 29.01vw;
+    padding: 0 0;
+  }
+
+  .fk-header__logo img {
+    vertical-align: baseline;
+  }
+
+  .fk-header__navList {
+    display: none;
   }
 
   .fk-mainContent {
@@ -647,6 +795,10 @@ button
 
   .fk-button-1 {
     font-size: 3.05vw;
+    padding: 1.81vw 9.03vw;
+  }
+
+  .fk-button__iconMail {
     padding: 1.81vw 9.03vw;
   }
 

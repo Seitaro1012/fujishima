@@ -118,4 +118,22 @@ button
   &__center{
     margin: 0 auto;
   }
+  &__iconMail{
+    display: flex;
+    padding: vwpc(16) vwpc(48) vwpc(16) vwpc(52);
+    @include mq-max(){
+      padding: rem(16) rem(48) rem(16) rem(52);
+    }
+    @include mq-down(){
+      padding: vw(7.11) vw(35.49);
+    }
+    &:before{
+      content: "";
+      display: block;
+      background: url("/assets/images/icon01.png") no-repeat 0 0 / 100%;;
+      width: vwpc(36);
+      height: vwpc(40);
+      margin-right: vwpc(2);
+    }
+  }
 }
