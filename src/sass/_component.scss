@@ -7,15 +7,35 @@ heading
 .fk-heading{
   // font-family: Noto Serif JP; 
   &-1 {
+    justify-content: center;
     font-weight: 700;
     font-size: vwpc(48);
+    display: flex;
+    align-items: center;
+    gap: vwpc(20);
     // line-height: 1.4375 ;
     // line-height: 1.5;
     @include mq-max(){
       font-size: rem(48);
+      gap: rem(20);
     }     
     @include mq-down() {
       font-size: vw(18);
+      gap: vw(20);
+    }
+    &::before{
+      content:"";
+      display: block;
+      height: vwpc(6);
+      width: vwpc(80);
+      background: $base-color-yellow;
+    }
+    &::after{
+      content:"";
+      display: block;
+      height: vwpc(6);
+      width: vwpc(80);
+      background: $base-color-yellow;
     }
   }
   &__sub {
@@ -24,11 +44,14 @@ heading
     font-size: vwpc(40);
     line-height: 1.172;
     color: $base-color-yellow;
+    margin-top: vwpc(8);
     @include mq-max(){
       font-size: rem(40);
+      margin-top: rem(8);
     }
     @include mq-down() {
       font-size: vw(16);
+      margin-top: vw(8);
     }
 
   }
@@ -130,7 +153,7 @@ button
     &:before{
       content: "";
       display: block;
-      background: url("/assets/images/icon01.png") no-repeat 0 0 / 100%;;
+      background: url("/assets/images/icon_mail.png") no-repeat 0 0 / 100%;;
       width: vwpc(36);
       height: vwpc(40);
       margin-right: vwpc(2);

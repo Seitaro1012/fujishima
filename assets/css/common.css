@@ -475,11 +475,11 @@ button:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 8.54vw;
-  padding: 0 2.92vw 0.63vw 2.5vw;
+  padding: 2.5vw 2.92vw 0.63vw 2.5vw;
 }
 
 .fk-header__logo {
@@ -489,7 +489,7 @@ button:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 15.52vw;
+  width: 14.48vw;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -500,7 +500,7 @@ button:hover {
 }
 
 .fk-header__logoText {
-  width: 9.58vw;
+  width: 8.54vw;
 }
 
 .fk-header__navList {
@@ -548,12 +548,91 @@ button:hover {
   padding: 0.83vw 2.5vw 0.83vw 2.71vw;
 }
 
+.fk-footer {
+  color: #fff;
+  background: #B5936E;
+  font-weight: 700;
+  position: relative;
+}
+
+.fk-footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.fk-footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 14.48vw;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 1.77vw;
+}
+
+.fk-footer__logoImage {
+  width: 5.21vw;
+}
+
+.fk-footer__logoText {
+  width: 8.54vw;
+}
+
+.fk-footer__address {
+  font-size: 1.67vw;
+}
+
+.fk-footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.fk-footer__navSns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.08vw;
+  margin-bottom: 4.27vw;
+}
+
+.fk-footer__navSns li {
+  width: 2.6vw;
+}
+
+.fk-footer__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5.21vw;
+  margin-bottom: 4.48vw;
+}
+
 .fk-wrap {
   max-width: 120rem;
 }
 
 .fk-mainContent {
-  margin-top: 14.58vw;
+  margin-top: 7.29vw;
+  margin-bottom: 13.33vw;
 }
 
 .fk-container {
@@ -566,8 +645,34 @@ heading
 ---------*/
 
 .fk-heading-1 {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 2.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.04vw;
+}
+
+.fk-heading-1::before {
+  content: "";
+  display: block;
+  height: 0.31vw;
+  width: 4.17vw;
+  background: #FADA89;
+}
+
+.fk-heading-1::after {
+  content: "";
+  display: block;
+  height: 0.31vw;
+  width: 4.17vw;
+  background: #FADA89;
 }
 
 .fk-heading__sub {
@@ -576,6 +681,7 @@ heading
   font-size: 2.08vw;
   line-height: 1.172;
   color: #FADA89;
+  margin-top: 0.42vw;
 }
 
 .fk-headingWrap {
@@ -635,7 +741,7 @@ button
 .fk-button__iconMail:before {
   content: "";
   display: block;
-  background: url("/assets/images/icon01.png") no-repeat 0 0/100%;
+  background: url("/assets/images/icon_mail.png") no-repeat 0 0/100%;
   width: 1.88vw;
   height: 2.08vw;
   margin-right: 0.1vw;
@@ -650,6 +756,16 @@ button
 }
 
 @media screen and (min-width: 768px) {
+  .fk-footer {
+    font-size: 1.46vw;
+  }
+
+  .fk-footer__container {
+    padding: 4.17vw 0 4.95vw;
+    max-width: 86.88vw;
+    margin: 0 auto;
+  }
+
   .fk-button-1 {
     font-size: 1.25vw;
     padding: 0.83vw 5.42vw;
@@ -667,7 +783,7 @@ button
 
   .fk-header {
     height: 10.25rem;
-    padding: 0 3.5rem 0.75rem 3rem;
+    padding: 3rem 3.5rem 0.75rem 3rem;
   }
 
   .fk-header__logo {
@@ -695,8 +811,42 @@ button
     padding: 1rem 3rem 1rem 3.25rem;
   }
 
+  .fk-footer {
+    font-size: 1.75rem;
+  }
+
+  .fk-footer__container {
+    padding: 5rem 0 5.94rem;
+    max-width: 104.25rem;
+  }
+
+  .fk-footer__logo {
+    width: 15.63rem;
+    padding: 0 0 0.5rem;
+    margin-bottom: 2.13rem;
+  }
+
+  .fk-footer__address {
+    font-size: 2rem;
+  }
+
+  .fk-footer__navSns {
+    gap: 2.5rem;
+    margin-bottom: 5.13rem;
+  }
+
+  .fk-footer__navSns li {
+    width: 3.13rem;
+  }
+
+  .fk-footer__navList {
+    gap: 6.25rem;
+    margin-bottom: 5.38rem;
+  }
+
   .fk-mainContent {
-    margin-top: 17.5rem;
+    margin-top: 8.75rem;
+    margin-bottom: 16rem;
   }
 
   .fk-container {
@@ -705,10 +855,12 @@ button
 
   .fk-heading-1 {
     font-size: 3rem;
+    gap: 1.25rem;
   }
 
   .fk-heading__sub {
     font-size: 2.5rem;
+    margin-top: 0.5rem;
   }
 
   .fk-headingWrap {
@@ -760,6 +912,41 @@ button
     display: none;
   }
 
+  .fk-footer {
+    font-size: 4.07vw;
+  }
+
+  .fk-footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 13.23vw 9.16vw 38.17vw;
+  }
+
+  .fk-footer__addressArea {
+    text-align: center;
+    width: 100%;
+  }
+
+  .fk-footer__logo {
+    width: 29.01vw;
+    padding: 0 0;
+  }
+
+  .fk-footer__logo img {
+    vertical-align: baseline;
+  }
+
+  .fk-footer__address {
+    font-size: 2.04vw;
+    margin-bottom: 12.72vw;
+  }
+
+  .fk-footer__navList {
+    gap: 7.63vw;
+  }
+
   .fk-mainContent {
     margin-top: 17.3vw;
   }
@@ -771,10 +958,12 @@ button
 
   .fk-heading-1 {
     font-size: 4.58vw;
+    gap: 5.09vw;
   }
 
   .fk-heading__sub {
     font-size: 4.07vw;
+    margin-top: 2.04vw;
   }
 
   .fk-headingWrap {
