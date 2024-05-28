@@ -21,12 +21,45 @@ const gu_header = `
       <a class="fk-button-1 fk-button__iconMail" href="__dummy__" tabindex="0">お問い合わせ</a>
     </li>
   </ul>
-  <!-- <button class="fk-mobile-menu-icon js-toggleButton" tabindex="0">
+  <button class="fk-mobile-menu-icon js-toggleButton" tabindex="0">
     <span></span>
     <span></span>
     <span></span>
-  </button> -->
+  </button>
 </header>
+<div class="fk-overlay">
+  <div class="fk-overlay__header">
+    <nav class="fk-overlay__nav">
+      <ul class="fk-overlay__navList">
+        <li>
+          <a href="__dummy__" tabindex="0">ご挨拶</a>
+        </li>
+        <li>
+          <a href="__dummy__" tabindex="0">施工事例</a>
+        </li>
+        <li>
+          <a href="__dummy__" tabindex="0">会社概要</a>
+        </li>
+        <li>
+          <a href="__dummy__" tabindex="0">お問い合わせ</a>
+        </li>
+        
+      </ul>
+    </nav>
+    <ul class="fk-overlay__headerSnsIcons">
+      <li><a href="__dummy__" tabindex="0"><img src="/assets/images/icon_phone.png" alt="__dummy__"></a></li>
+      <li><a href="__dummy__" tabindex="0"><img src="/assets/images/icon_mail.png" alt="__dummy__"></a></li>
+      <li><a href="__dummy__" tabindex="0"><img src="/assets/images/icon_map.png" alt="__dummy__"></a></li>
+    </ul>
+    <p class="fk-overlay__headerCompanyName">有限会社&nbsp;藤島建設</p>
+    <p class="fk-overlay__headerAddress">〒194-0038 東京都町田市根岸1-5-25<br>TEL / FAX 042-814-7770</p>
+  </div>
+  <p class="fk-overlay__copyright">&copy;2020 Fujishima Kensetsu Ltd. </p>
+  <div class="fk-object fk-object--overlay">
+    <div class="fk-object__shape fk-object__shape--blue02"></div>
+    <div class="fk-object__shape fk-object__shape--blue03"></div>
+  </div>
+</div>
 `;
 
 
@@ -40,7 +73,7 @@ const gu_footer = `
       </a>
       <p class="fk-footer__address">
         〒194-0038 東京都町田市根岸1-5-25
-        <br class="only-pc">TEL / FAX 042-814-7770
+        <br>TEL / FAX 042-814-7770
       </p>
       
     </div>
