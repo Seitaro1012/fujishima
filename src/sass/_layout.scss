@@ -156,10 +156,11 @@ body.js-overlay {
   @include mq-up(){
     display: none;
   }
+  overflow-y: scroll;
   // display:block;
   color:$base-color-black;
   font-weight: 700;
-  font-size: vh(12);
+  font-size: vw(12);
   position: absolute;
   height: 100vh;
   top: 0;
@@ -167,7 +168,7 @@ body.js-overlay {
   right: 0;
   left: 0;
   background: $base-color-yellow;      
-  padding: vh(24) vh(24) vh(40);
+  padding: vw(24) vw(24) vw(40);
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s ease-in;
@@ -175,21 +176,21 @@ body.js-overlay {
   display: flex;
   flex-direction:column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   &__header{
-    margin-top: vh(49);
+    margin-top: vw(49);
     display: flex;
     flex-direction:column;
     align-items: center;
     &Address{
-      margin-bottom: vh(19);
+      margin-bottom: vw(19);
     }
     &SnsIcons{
       display: flex;
-      gap: vh(24);
-      margin-bottom: vh(72);
+      gap: vw(24);
+      margin-bottom: vw(72);
       & li {
-        width:vh(24);
+        width:vw(24);
       }
     }
     &CompanyName{
@@ -199,14 +200,14 @@ body.js-overlay {
   &__navList{
     display: flex;
     flex-direction: column;
-    font-size:vh(14);
-    gap:vh(24);
-    margin-bottom: vh(52);
+    font-size:vw(14);
+    gap:vw(24);
+    margin-bottom: vw(52);
     align-items: center;
   }
   &__copyright{
     font-family: roboto;
-    font-size: vh(12);
+    font-size: vw(12);
     font-weight: 300;
   }
 

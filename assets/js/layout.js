@@ -55,10 +55,6 @@ const gu_header = `
     <p class="fk-overlay__headerAddress">〒194-0038 東京都町田市根岸1-5-25<br>TEL / FAX 042-814-7770</p>
   </div>
   <p class="fk-overlay__copyright">&copy;2020 Fujishima Kensetsu Ltd. </p>
-  <div class="fk-object fk-object--overlay">
-    <div class="fk-object__shape fk-object__shape--blue02"></div>
-    <div class="fk-object__shape fk-object__shape--blue03"></div>
-  </div>
 </div>
 `;
 

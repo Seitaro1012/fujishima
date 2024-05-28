@@ -601,9 +601,10 @@ body.js-overlay {
 }
 
 .fk-overlay {
+  overflow-y: scroll;
   color: #0B1D26;
   font-weight: 700;
-  font-size: 2.14vh;
+  font-size: 3.05vw;
   position: absolute;
   height: 100vh;
   top: 0;
@@ -611,7 +612,7 @@ body.js-overlay {
   right: 0;
   left: 0;
   background: #FADA89;
-  padding: 4.29vh 4.29vh 7.14vh;
+  padding: 6.11vw 6.11vw 10.18vw;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: opacity 0.3s ease-in;
@@ -627,9 +628,9 @@ body.js-overlay {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .fk-overlay.js-show {
@@ -638,7 +639,7 @@ body.js-overlay {
 }
 
 .fk-overlay__header {
-  margin-top: 8.75vh;
+  margin-top: 12.47vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -652,19 +653,19 @@ body.js-overlay {
 }
 
 .fk-overlay__headerAddress {
-  margin-bottom: 3.39vh;
+  margin-bottom: 4.83vw;
 }
 
 .fk-overlay__headerSnsIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4.29vh;
-  margin-bottom: 12.86vh;
+  gap: 6.11vw;
+  margin-bottom: 18.32vw;
 }
 
 .fk-overlay__headerSnsIcons li {
-  width: 4.29vh;
+  width: 6.11vw;
 }
 
 .fk-overlay__headerCompanyName {
@@ -679,9 +680,9 @@ body.js-overlay {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-size: 2.5vh;
-  gap: 4.29vh;
-  margin-bottom: 9.29vh;
+  font-size: 3.56vw;
+  gap: 6.11vw;
+  margin-bottom: 13.23vw;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -689,7 +690,7 @@ body.js-overlay {
 
 .fk-overlay__copyright {
   font-family: roboto;
-  font-size: 2.14vh;
+  font-size: 3.05vw;
   font-weight: 300;
 }
 
