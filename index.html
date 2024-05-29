@@ -10,14 +10,16 @@
     />
     <title>フジシマケンセツ</title>
     <script src="/assets/js/jquery-3.7.1.min.js" defer></script>
-    <script src="/assets/js/jquery.ripples-min.js" defer></script>
+    <!-- <script src="/assets/js/jquery.ripples-min.js" defer></script> -->
     <script type="module" src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/splide.min.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/assets/css/top/style.css" />
+    <link rel="stylesheet" href="/assets/lib/css/splide.min.css">
     <meta
       name="google-site-verification"
       content="ox8uMmxTDGtj7BW3_Ncnl2hRVLihomVxYr9F6ZjssQM"
@@ -28,6 +30,15 @@
       <div id="fk-header-js"></div>
       <main>
         <div class="fk-top-mv">
+          <section class="splide" aria-label="メインビジュアルのスライド">
+            <div class="fk-top-mvImage splide__track">
+              <ul class="fk-top-mvImageList splide__list">
+                <li class="splide__slide"><img src="/assets/images/image_mv01.jpg" alt="__dummy__"></li>
+                <li class="splide__slide"><img src="/assets/images/image_mv02.jpg" alt="__dummy__"></li>
+                <li class="splide__slide"><img src="/assets/images/image_mv03.jpg" alt="__dummy__"></li>
+              </ul>
+            </div>
+          </section>
           <div class="fk-top-mvTitle">
             <p class="fk-top-mvTitle__text fk-heading-1 fk-heading__color-a">
               MAKE PASSION<br />MAKE MOVEMENT
@@ -271,5 +282,13 @@
 
       <div id="fk-footer-js"></div>
     </div>
+
+    <script>
+      document.addEventListener( 'DOMContentLoaded', function() {
+        const splide = new Splide( '.splide' );
+        splide.mount();
+      } );
+
+    </script>
   </body>
 </html>
