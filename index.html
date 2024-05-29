@@ -12,7 +12,7 @@
     <script src="/assets/js/jquery-3.7.1.min.js" defer></script>
     <!-- <script src="/assets/js/jquery.ripples-min.js" defer></script> -->
     <script type="module" src="/assets/js/main.js" defer></script>
-    <script src="/assets/js/splide.min.js" defer></script>
+    <script src="/assets/lib/js/splide.min.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -30,22 +30,32 @@
       <div id="fk-header-js"></div>
       <main>
         <div class="fk-top-mv">
-          <section class="splide" aria-label="メインビジュアルのスライド">
-            <div class="fk-top-mvImage splide__track">
-              <ul class="fk-top-mvImageList splide__list">
-                <li class="splide__slide"><img src="/assets/images/image_mv01.jpg" alt="__dummy__"></li>
-                <li class="splide__slide"><img src="/assets/images/image_mv02.jpg" alt="__dummy__"></li>
-                <li class="splide__slide"><img src="/assets/images/image_mv03.jpg" alt="__dummy__"></li>
-              </ul>
+          <div class="fk-top-mvImage">
+            <section class="splide" aria-label="メインビジュアルのスライド">
+              <div class="splide__track">
+                <ul class="fk-top-mvImageList splide__list">
+                  <li class="splide__slide"><img src="/assets/images/image_mv01.jpg" alt="__dummy__"></li>
+                  <li class="splide__slide"><img src="/assets/images/image_mv02.jpg" alt="__dummy__"></li>
+                  <li class="splide__slide"><img src="/assets/images/image_mv03.jpg" alt="__dummy__"></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="fk-top-mvContent">
+            <p class="fk-top-mvContent__title">
+              「一生に一度」を大切にします
+            </p>
+            <div class="fk-top-mvContent__body">
+              <p class="fk-text-1">
+                ようこそ藤島建設へ<br>
+                住宅の購入は一生に一度の大きな決断です<br>
+                だからこそ後悔のない選択をしてほしい<br>
+                わたしたちは確かな施行技術と品質管理で<br>
+                あなたと共に理想の家を追求します
+              </p>
             </div>
-          </section>
-          <div class="fk-top-mvTitle">
-            <p class="fk-top-mvTitle__text fk-heading-1 fk-heading__color-a">
-              MAKE PASSION<br />MAKE MOVEMENT
-            </p>
-            <p class="fk-top-mvTitle__subText fk-heading-3 fk-heading__color-a">
-              共に新しい未来をこの場所に創る
-            </p>
+            <span>&copy; 2020 Fujishima Kensetsu Ltd.</span>
+            <p><img src="/assets/images/image_text01.svg" alt="フジシマケンセツ"></p>
           </div>
           <div class="fk-top-mvScrollGuide">
             <p class="fk-top-mvScrollGuide__text">
@@ -285,7 +295,16 @@
 
     <script>
       document.addEventListener( 'DOMContentLoaded', function() {
-        const splide = new Splide( '.splide' );
+        const splide = new Splide( '.splide', {
+          type : 'fade',
+          rewind: true,
+          speed: 1000,
+          autoplay: true,
+          easing: 'ease-in-out',
+          interval: 8000,
+          arrows: false,
+          pagination: false
+        } );
         splide.mount();
       } );
 

@@ -192,14 +192,33 @@
   
 // }
 
-// .fk-top-mv {
+.fk-top-mv {
+  padding: vwpc(70) 0 vwpc(100);
 //   height: vwpc(1080);
 //   background: url('/assets/images/top_MV01.jpg') no-repeat 0 0 / cover;
-//   position: relative;
+  position: relative;
 //   @include mq-down(){
 //     background: url('/assets/images/top_MV01sp.jpg') no-repeat 0 0 / 100%;
 //     height:vw(640);
 //   }
+  &Image{
+    width: vwpc(1584);
+    height: vwpc(720);
+  }
+  &Content{
+
+    &__title{
+      font-size: vwpc(58);
+      font-weight: 700;
+      @include mq-max(){
+        font-size: rem(58);
+
+      }
+    }
+    &__body{
+      background: $base-color-yellow;
+    }
+  }
 //   &Title{
 //     position: relative;
 //     z-index: 10;
@@ -273,7 +292,7 @@
 //       width: 100%;
 //     }
 //   }
-// }
+}
 
 
 // // スクロールガイドアニメーション
