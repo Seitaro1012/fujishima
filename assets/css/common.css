@@ -830,9 +830,13 @@ heading
   margin-top: 0.42vw;
 }
 
+.fk-heading-2 {
+  font-weight: 700;
+  font-size: 2.08vw;
+}
+
 .fk-headingWrap {
   text-align: center;
-  margin-bottom: 6.25vw;
 }
 
 /*--------
@@ -1025,6 +1029,10 @@ button
     margin-top: 0.5rem;
   }
 
+  .fk-heading-2 {
+    font-size: 2.5rem;
+  }
+
   .fk-headingWrap {
     font-size: 7.5rem;
   }
@@ -1167,6 +1175,10 @@ button
   .fk-heading__sub {
     font-size: 4.07vw;
     margin-top: 2.04vw;
+  }
+
+  .fk-heading-2 {
+    font-size: 4.58vw;
   }
 
   .fk-headingWrap {

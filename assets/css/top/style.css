@@ -8,13 +8,127 @@
   height: 37.5vw;
 }
 
+.fk-top-mvContent {
+  position: absolute;
+  top: 27%;
+  right: 0;
+}
+
 .fk-top-mvContent__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
   font-size: 3.02vw;
   font-weight: 700;
+  padding-right: 0.7em;
 }
 
 .fk-top-mvContent__body {
   background: #FADA89;
+  margin-left: auto;
+  width: 42.92vw;
+  padding: 1.56vw 3.75vw;
+}
+
+.fk-top-mvCopyright {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 1.25vw;
+  padding-right: 2px;
+  margin-bottom: 5.99vw;
+}
+
+.fk-top-bgText {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.fk-top-bgText-1 {
+  color: #FADA89;
+  font-size: 6.25vw;
+  opacity: 0.4;
+}
+
+.fk-top-bgText-2 {
+  color: #D2CFCD;
+  font-size: 5.21vw;
+  opacity: 0.5;
+}
+
+.fk-top-about {
+  margin-top: 7.81vw;
+}
+
+.fk-top-about .fk-headingWrap {
+  margin-bottom: 5vw;
+}
+
+.fk-top-about__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3.33vw 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 7.81vw;
+}
+
+.fk-top-about__block:nth-of-type(odd) .fk-top-about__blockImage {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+.fk-top-about__block:nth-of-type(odd) .fk-heading-2 {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.fk-top-about__block:nth-of-type(odd) .fk-top-bgText {
+  right: 0;
+}
+
+.fk-top-about__block:last-child {
+  margin-bottom: 0;
+}
+
+.fk-top-about__blockContent {
+  position: relative;
+  width: 45%;
+}
+
+.fk-top-about__blockContent .fk-top-bgText {
+  position: absolute;
+  top: -0.9em;
+  padding: 0 3.07vw;
+}
+
+.fk-top-about__blockContentHead {
+  background: #FADA89;
+  padding: 2.08vw 3.33vw;
+}
+
+.fk-top-about__blockContentHead .fk-heading-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.fk-top-about__blockContentBody {
+  padding: 3.13vw 2.71vw 0 4.79vw;
+}
+
+.fk-top-about__blockImage {
+  width: 50%;
 }
 
 @media screen and (min-width: 1920px) {

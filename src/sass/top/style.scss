@@ -206,10 +206,17 @@
     height: vwpc(720);
   }
   &Content{
+    position: absolute;
+    top:27%;
+    // width:vwpc(839);
+    right:0;
 
     &__title{
+      width: fit-content;
+      margin-left: auto;
       font-size: vwpc(58);
       font-weight: 700;
+      padding-right: 0.7em;
       @include mq-max(){
         font-size: rem(58);
 
@@ -217,7 +224,18 @@
     }
     &__body{
       background: $base-color-yellow;
+      margin-left: auto;
+      width:vwpc(824);
+      padding:vwpc(30) vwpc(72);
     }
+  }
+  &Copyright{
+    width: fit-content;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: vwpc(24);
+    padding-right: 2px;
+    margin-bottom: vwpc(115);
   }
 //   &Title{
 //     position: relative;
@@ -295,6 +313,76 @@
 }
 
 
+.fk-top-bgText{
+  font-family: 'Roboto';
+  font-weight:700;
+  &-1{
+    color: $base-color-yellow;
+    font-size: vwpc(120);
+    opacity: .4;
+  }
+  &-2{
+    color: #D2CFCD;
+    font-size: vwpc(100);
+    opacity: .5;
+  }
+}
+
+.fk-top-about{
+  margin-top: vwpc(150);
+  .fk-headingWrap {
+    margin-bottom: vwpc(96);
+  }
+  &__block{
+    display: flex;
+    padding: vwpc(64) 0;
+    justify-content: space-between;
+    margin-bottom: vwpc(150);
+    &:nth-of-type(odd){
+      .fk-top-about__blockImage{
+        order: -1;
+      }
+      .fk-heading-2{
+        justify-content: flex-start;
+      }
+      .fk-top-bgText{
+        right:0;
+      }
+    }
+    &:last-child{
+      margin-bottom:0;
+    }
+    &Content{
+      position: relative;
+      width: 45%;
+
+      .fk-top-bgText{
+        position: absolute;
+        top: -0.9em;
+        padding:0 vwpc(59);
+
+      }
+
+      &Head{
+
+        background: $base-color-yellow;
+        padding: vwpc(40) vwpc(64);
+        & .fk-heading-2 {
+          display: flex;
+          justify-content:flex-end;
+        }
+      }
+      &Body{
+        padding: vwpc(60) vwpc(52) 0 vwpc(92) ;
+
+      }
+
+    }
+    &Image{
+      width: 50%;
+    }
+  }
+}
 // // スクロールガイドアニメーション
 // @keyframes bounce {
 //   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
