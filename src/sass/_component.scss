@@ -29,6 +29,14 @@ heading
       height: vwpc(6);
       width: vwpc(80);
       background: $base-color-yellow;
+      @include mq-max(){
+        height: rem(6);
+        width: rem(80);
+      }
+      @include mq-down(){
+        height: vw(6);
+        width: vw(40);
+      }
     }
     &::after{
       content:"";
@@ -36,6 +44,14 @@ heading
       height: vwpc(6);
       width: vwpc(80);
       background: $base-color-yellow;
+      @include mq-max(){
+        height: rem(6);
+        width: rem(80);
+      }
+      @include mq-down(){
+        height: vw(6);
+        width: vw(40);
+      }
     }
   }
   &__sub {

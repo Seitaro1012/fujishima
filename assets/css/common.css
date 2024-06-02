@@ -1024,6 +1024,16 @@ button
     gap: 1.25rem;
   }
 
+  .fk-heading-1::before {
+    height: 0.38rem;
+    width: 5rem;
+  }
+
+  .fk-heading-1::after {
+    height: 0.38rem;
+    width: 5rem;
+  }
+
   .fk-heading__sub {
     font-size: 2.5rem;
     margin-top: 0.5rem;
@@ -1170,6 +1180,16 @@ button
   .fk-heading-1 {
     font-size: 4.58vw;
     gap: 5.09vw;
+  }
+
+  .fk-heading-1::before {
+    height: 1.53vw;
+    width: 10.18vw;
+  }
+
+  .fk-heading-1::after {
+    height: 1.53vw;
+    width: 10.18vw;
   }
 
   .fk-heading__sub {
