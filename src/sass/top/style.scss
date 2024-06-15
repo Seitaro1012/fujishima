@@ -462,6 +462,13 @@
   }
 }
 
+.top-example-pic {
+    width: vwpc(520);
+    height: vwpc(320);
+    object-fit: cover;
+}
+
+
 .fk-top-location{
   .fk-headingWrap{
     margin-bottom: vwpc(24);

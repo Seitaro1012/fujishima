@@ -165,6 +165,13 @@
   flex-basis: calc((100% - 6.25vw) * 0.3333);
 }
 
+.top-example-pic {
+  width: 27.08vw;
+  height: 16.67vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .fk-top-location .fk-headingWrap {
   margin-bottom: 1.25vw;
 }
