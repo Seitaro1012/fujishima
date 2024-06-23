@@ -1,2 +1,41 @@
 @use '../config' as *;
 @use '../mixin' as *;
+
+.company .fk-mainContent{
+  background: url('/assets/images/object/bg_obje01.svg') no-repeat right 3.5%/62%, url('/assets/images/object/bg_obje01.svg') no-repeat left 37%/62%,url('/assets/images/object/bg_obje01.svg') no-repeat right 74%/62% ;
+}
+
+// .fk-section__company-1 .fkcontentWrap 
+
+.fk-companyTable{
+  display: flex;
+  flex-wrap: wrap;
+  .fk-text-1 {
+    margin-top:0 ;
+  }
+  dt {
+    width: 15%;
+  }
+  dd {
+    width: 85%;
+    min-height: vwpc(165);
+    padding: 0 0 vwpc(20) vwpc(20);
+    @include mq-up(){
+      min-height: rem(165);
+      padding: 0 0 rem(20) rem(20);
+    }
+    @include mq-down(){
+      min-height: rem(165);
+      padding: 0 0 rem(20) rem(20);
+    }
+  }
+}
+.fk-section__company-1{
+  margin-bottom: vwpc(200);
+  @include mq-up(){
+    margin-bottom: rem(200);
+  }
+  @include mq-down(){
+    margin-bottom: vw(200);
+  }
+}

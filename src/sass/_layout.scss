@@ -364,14 +364,15 @@ body.js-overlay {
 }
 .fk-mainContent {
   margin-top: vwpc(140);
-  margin-bottom: vwpc(256);
+  padding-bottom: vwpc(256);
   @include mq-max(){
     margin-top: rem(140);
-    margin-bottom: rem(256);
+    padding-bottom: rem(256);
   }
   @include mq-down() {
-    margin-top: vw(68);
+    margin-top: vw(56);
   }
+  
 }
 .fk-container{
   max-width: vwpc(1480);

@@ -1,2 +1,52 @@
+.company .fk-mainContent {
+  background: url("/assets/images/object/bg_obje01.svg") no-repeat right 3.5%/62%, url("/assets/images/object/bg_obje01.svg") no-repeat left 37%/62%, url("/assets/images/object/bg_obje01.svg") no-repeat right 74%/62%;
+}
 
+.fk-companyTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.fk-companyTable .fk-text-1 {
+  margin-top: 0;
+}
+
+.fk-companyTable dt {
+  width: 15%;
+}
+
+.fk-companyTable dd {
+  width: 85%;
+  min-height: 8.59vw;
+  padding: 0 0 1.04vw 1.04vw;
+}
+
+.fk-section__company-1 {
+  margin-bottom: 10.42vw;
+}
+
+@media screen and (min-width: 768px) {
+  .fk-companyTable dd {
+    min-height: 10.31rem;
+    padding: 0 0 1.25rem 1.25rem;
+  }
+
+  .fk-section__company-1 {
+    margin-bottom: 12.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fk-companyTable dd {
+    min-height: 10.31rem;
+    padding: 0 0 1.25rem 1.25rem;
+  }
+
+  .fk-section__company-1 {
+    margin-bottom: 50.89vw;
+  }
+}
 /*# sourceMappingURL=style.css.map */

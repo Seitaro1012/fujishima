@@ -1,3 +1,7 @@
+.greeting .fk-mainContent {
+  background: url("/assets/images/object/bg_obje01.svg") no-repeat left bottom/62%;
+}
+
 .fk-section__greeting-1 .fk-button-1 {
   margin-top: 6.25vw;
 }

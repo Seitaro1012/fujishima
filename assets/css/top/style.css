@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.top .fk-mainContent {
+  margin: 0;
+  background: url("/assets/images/object/bg_obje01.svg") no-repeat left 17.2%/56%, url("/assets/images/object/bg_obje01.svg") no-repeat right 37%/56%, url("/assets/images/object/bg_obje01.svg") no-repeat left 57.2%/56%;
+}
+
 .fk-top-mv {
   padding: 3.65vw 0 5.21vw;
   position: relative;
