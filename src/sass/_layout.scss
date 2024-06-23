@@ -3,6 +3,8 @@
 // ヘッダーフッター
 
 #fk-header-js{
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   @include mq-up(){
     height: vwpc(164);
   }
@@ -10,7 +12,7 @@
     height: rem(164);
   }
   @include mq-down(){
-    height: vw(56);
+    height: vw(80);
   }
 }
 .fk-header{
@@ -25,8 +27,8 @@
     padding:rem(48) rem(56) rem(12) rem(48);
   }
   @include mq-down(){
-    height: vw(56);
-    padding: vw(16) vw(16) 0;
+    height: vw(80);
+    padding: vw(16) vw(16) vw(24);
   }
 
   &__logo{
@@ -358,6 +360,7 @@ body.js-overlay {
 // メイン
 .fk-wrap {
   max-width: rem(1920);
+  margin: 0 auto;
 }
 .fk-mainContent {
   margin-top: vwpc(140);
@@ -381,6 +384,10 @@ body.js-overlay {
     margin-left: vw(24);
     margin-right: vw(24);
   }
+}
+#fk-footer-js{
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 // .fk-inner{
 //   @include mq-up(){

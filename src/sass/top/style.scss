@@ -256,6 +256,12 @@
       font-size: rem(24);
       margin-bottom: rem(115);
     }
+    @include mq-down(){
+      font-size: vw(12);
+      position: absolute;
+      bottom: vw(-183);
+      right: vw(8);
+    }
 
   }
 
@@ -452,21 +458,27 @@
     }
     &Item{
       flex-basis: calc((100% - vwpc(120)) * 0.3333);
+      height: vwpc(320);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
       @include mq-max(){
         flex-basis: calc((100% - rem(120)) * 0.3333);
+        height: 320px;
       }
       @include mq-down(){
         flex-basis: calc((100% - vw(32)) * 0.3333);
+        height: vw(65);
       }
     }
   }
 }
 
-.top-example-pic {
-    width: vwpc(520);
-    height: vwpc(320);
-    object-fit: cover;
-}
+// .top-example-pic {
+//     width: vwpc(520);
+//     height: vwpc(320);
+//     object-fit: cover;
+// }
 
 
 .fk-top-location{

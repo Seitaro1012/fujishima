@@ -468,6 +468,11 @@ button:hover {
   opacity: 0.75;
 }
 
+#fk-header-js {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
 .fk-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -774,6 +779,7 @@ body.js-overlay {
 
 .fk-wrap {
   max-width: 120rem;
+  margin: 0 auto;
 }
 
 .fk-mainContent {
@@ -784,6 +790,11 @@ body.js-overlay {
 .fk-container {
   max-width: 77.08vw;
   margin: 0 auto;
+}
+
+#fk-footer-js {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 /*--------
@@ -1075,12 +1086,12 @@ button
   }
 
   #fk-header-js {
-    height: 14.25vw;
+    height: 20.36vw;
   }
 
   .fk-header {
-    height: 14.25vw;
-    padding: 4.07vw 4.07vw 0;
+    height: 20.36vw;
+    padding: 4.07vw 4.07vw 6.11vw;
   }
 
   .fk-header__logo {
