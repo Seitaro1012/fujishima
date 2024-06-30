@@ -1,0 +1,68 @@
+@use '../config' as *;
+@use '../mixin' as *;
+
+.company .fk-mainContent{
+  background: url('/assets/images/object/bg_obje01.svg') no-repeat right 3.5%/62%, url('/assets/images/object/bg_obje01.svg') no-repeat left 37%/62%,url('/assets/images/object/bg_obje01.svg') no-repeat right 74%/62% ;
+}
+
+.fk-example{
+  margin-top: vwpc(190);
+  padding-bottom: vwpc(96);
+  @include mq-max(){
+    margin-top: rem(190);
+    padding-bottom: rem(96);
+  }
+  @include mq-down(){
+    margin-top: vw(88);
+    padding-bottom: vw(112);
+
+  }
+  .fk-headingWrap{
+    margin-bottom: vwpc(96);
+    @include mq-max(){
+      margin-bottom: rem(96);
+    }
+    @include mq-down(){
+      margin-bottom: vw(40);
+    }
+  }
+  &__block{
+    margin: 0 vwpc(120);
+    @include mq-max(){
+      margin: 0 rem(120);
+    }
+  }
+  &__list{
+    margin-bottom: vwpc(200);
+    display: flex;
+    column-gap: vwpc(60); 
+    row-gap: vwpc(160); 
+    flex-wrap: wrap;
+    @include mq-max(){
+      margin-bottom: rem(200);
+      column-gap: rem(60); 
+      row-gap: rem(160); 
+    }
+    @include mq-down(){
+      margin-bottom: vw(32);
+      column-gap: vw(16); 
+      row-gap: vw(24); 
+      
+    }
+    &Item{
+      flex-basis: calc((100% - vwpc(120)) * 0.3333);
+      height: vwpc(320);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      @include mq-max(){
+        flex-basis: calc((100% - rem(120)) * 0.3333);
+        height: 320px;
+      }
+      @include mq-down(){
+        flex-basis: calc((100% - vw(32)) * 0.3333);
+        height: vw(65);
+      }
+    }
+  }
+}
