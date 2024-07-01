@@ -41,6 +41,13 @@
   overflow: hidden;
 }
 
+.fk-example__list :hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 @media screen and (min-width: 1920px) {
   .fk-example {
     margin-top: 11.88rem;
