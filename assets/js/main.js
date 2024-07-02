@@ -80,3 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+$(function(){
+  $(".more").on("click", function() {
+    $(this).toggleClass("on-click");
+    $(".img-hide").slideToggle(1000);
+  });
+}); 
