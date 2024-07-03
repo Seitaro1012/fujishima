@@ -14,7 +14,7 @@
   }
   @include mq-down(){
     margin-top: vw(88);
-    padding-bottom: vw(112);
+    padding-bottom: vw(0);
 
   }
   .fk-headingWrap{
@@ -47,7 +47,8 @@
       margin-bottom: vw(32);
       column-gap: vw(16); 
       row-gap: vw(24); 
-      
+      display: block;
+      margin-bottom: 0;
     }
     &Item{
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -62,7 +63,8 @@
       }
       @include mq-down(){
         flex-basis: calc((100% - vw(32)) * 0.3333);
-        height: vw(65);
+        height: vw(200);
+        margin-top: 20px;
       }
     }
     :hover{
@@ -83,7 +85,7 @@
   font-weight: bold;
   text-align: center;
   width: 200px;
-  margin: 20px auto;
+  margin: 30px auto;
   display: block;
   background-color: #FADA89;
   padding:10px 15px;
