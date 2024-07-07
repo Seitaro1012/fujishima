@@ -86,3 +86,42 @@ $(function(){
     $(".img-hide").slideToggle(1000);
   });
 }); 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('.fk-button-1 ');
+  links.forEach(link => {
+      link.addEventListener('click', function(e) {
+          const url = new URL(this.href);
+          if (url.origin === window.location.origin && url.pathname === window.location.pathname) {
+              e.preventDefault();
+              const targetId = url.hash.substring(1);
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                  targetElement.scrollIntoView({ behavior: 'smooth' });
+              }
+          }
+      });
+  });
+});
+
+$(function() {
+	setTimeout(function(){
+		$('.start p').fadeIn(1600);
+	},500); //0.5秒後にロゴをフェードイン!
+	setTimeout(function(){
+		$('.start').fadeOut(500);
+	},2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+});
+
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+      $('.fade-in-element').each(function() {
+          var elementTop = $(this).offset().top;
+          var windowBottom = $(window).scrollTop() + $(window).height();
+          
+          if (windowBottom > elementTop) {
+              $(this).css('opacity', 1);
+          }
+      });
+  });
+});

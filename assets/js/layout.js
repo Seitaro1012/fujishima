@@ -9,16 +9,16 @@ const gu_header = `
 
   <ul class="fk-header__navList">
     <li>
-      <a href="__dummy__" tabindex="0">ご挨拶</a>
+      <a href="/greeting/" tabindex="0">ご挨拶</a>
     </li>
     <li>
-      <a href="__dummy__" tabindex="0">施工事例</a>
+      <a href="/example/" tabindex="0">施工事例</a>
     </li>
     <li>
-      <a href="__dummy__" tabindex="0">会社概要</a>
+      <a href="/company/" tabindex="0">会社概要</a>
     </li>
     <li>
-      <a class="fk-button-1 fk-button__iconMail" href="__dummy__" tabindex="0">お問い合わせ</a>
+      <a class="fk-button-1 fk-button__iconMail" href="/#info-section" data-target="info-section" tabindex="0">お問い合わせ</a>
     </li>
   </ul>
   <button class="fk-mobile-menu-icon js-toggleButton" tabindex="0">
@@ -32,16 +32,16 @@ const gu_header = `
     <nav class="fk-overlay__nav">
       <ul class="fk-overlay__navList">
         <li>
-          <a href="__dummy__" tabindex="0">ご挨拶</a>
+          <a href="/greeting" tabindex="0">ご挨拶</a>
         </li>
         <li>
-          <a href="__dummy__" tabindex="0">施工事例</a>
+          <a href="example" tabindex="0">施工事例</a>
         </li>
         <li>
-          <a href="__dummy__" tabindex="0">会社概要</a>
+          <a href="company" tabindex="0">会社概要</a>
         </li>
         <li>
-          <a href="__dummy__" tabindex="0">お問い合わせ</a>
+          <a href=".fk-top-contact" tabindex="0">お問い合わせ</a>
         </li>
         
       </ul>
@@ -83,16 +83,16 @@ const gu_footer = `
       </ul>
       <ul class="fk-footer__navList">
         <li>
-          <a href="__dummy__" tabindex="0">ご挨拶</a>
+          <a href="/greeting/" tabindex="0">ご挨拶</a>
         </li>
         <li>
-          <a href="__dummy__" tabindex="0">施行事例</a>
+          <a href="/example" tabindex="0">施行事例</a>
         </li>
         <li>
-          <a href="__dummy__" tabindex="0">会社概要</a>
+          <a href="company" tabindex="0">会社概要</a>
         </li>
         <li>
-          <a href="__dummy__" tabindex="0">お問い合わせ</a>
+          <a href=".fk-top-contact" tabindex="0">お問い合わせ</a>
         </li>
         
       </ul>

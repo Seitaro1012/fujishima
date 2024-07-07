@@ -909,6 +909,12 @@ button
   margin-right: 0.1vw;
 }
 
+.fade-in-element {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
 .hide {
   display: none !important;
 }
