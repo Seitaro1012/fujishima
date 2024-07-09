@@ -441,3 +441,21 @@ body.js-overlay {
 // }
 
 
+/* オブジェクトフェードインのスタイル*/
+
+.fadeIn {
+  opacity: 0; /* 初期状態を非表示に */
+  transition: opacity 1.2s ease; /* アニメーション設定 */
+  &.is-active {
+  opacity: 1; /* フェードイン完了状態の透明度 */
+  }
+}
+
+
+.openFadeIn {
+  opacity: 0; /* 初期状態を透明にする */
+  transition: opacity 2.0s ease; /* アニメーション設定 */
+  &.is-active {
+    opacity: 1; /* フェードイン完了状態の透明度 */
+  }
+}

@@ -104,14 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-$(function() {
-	setTimeout(function(){
-		$('.start p').fadeIn(1600);
-	},500); //0.5秒後にロゴをフェードイン!
-	setTimeout(function(){
-		$('.start').fadeOut(500);
-	},2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
-});
 
 $(document).ready(function() {
   $(window).on('scroll', function() {
@@ -124,4 +116,24 @@ $(document).ready(function() {
           }
       });
   });
+});
+
+/**
+ オブジェクトがフェードインするアニメーション
+ */
+
+$(window).scroll(function() {
+  $('.fadeIn').each(function() {
+    const scrollPosition = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    const fadeinTargetTop = $(this).offset().top;
+
+    if (scrollPosition >= fadeinTargetTop - windowHeight / 2) {
+      $(this).addClass('is-active');
+    }
+  });
+});
+
+$(document).ready(function() {
+  $('.openFadeIn').addClass('is-active');
 });
