@@ -529,6 +529,17 @@
   padding-bottom: 0;
 }
 
+.splide__slide::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(210deg, rgba(255, 255, 255, 0.568627451) 10%, rgba(0, 0, 0, 0.1294117647) 90%);
+  background: linear-gradient(240deg, rgba(255, 255, 255, 0.568627451) 10%, rgba(0, 0, 0, 0.1294117647) 90%);
+}
+
 @media screen and (min-width: 768px) {
   .u-space {
     margin-right: 0.3em;

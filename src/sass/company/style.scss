@@ -18,14 +18,13 @@
   }
   dd {
     width: 85%;
-    min-height: vwpc(165);
     padding: 0 0 vwpc(20) vwpc(20);
     @include mq-up(){
-      min-height: rem(165);
+      min-height: rem(100);
       padding: 0 0 rem(20) rem(20);
     }
     @include mq-down(){
-      min-height: rem(165);
+      min-height: rem(100);
       padding: 0 0 rem(20) rem(20);
     }
   }

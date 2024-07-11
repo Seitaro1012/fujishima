@@ -32,13 +32,13 @@ const gu_header = `
     <nav class="fk-overlay__nav">
       <ul class="fk-overlay__navList">
         <li>
-          <a href="/greeting" tabindex="0">ご挨拶</a>
+          <a href="/greeting/" tabindex="0">ご挨拶</a>
         </li>
         <li>
-          <a href="example" tabindex="0">施工事例</a>
+          <a href="/example/" tabindex="0">施工事例</a>
         </li>
         <li>
-          <a href="company" tabindex="0">会社概要</a>
+          <a href="/company/" tabindex="0">会社概要</a>
         </li>
         <li>
           <a href=".fk-top-contact" tabindex="0">お問い合わせ</a>
@@ -86,13 +86,13 @@ const gu_footer = `
           <a href="/greeting/" tabindex="0">ご挨拶</a>
         </li>
         <li>
-          <a href="/example" tabindex="0">施行事例</a>
+          <a href="/example/" tabindex="0">施行事例</a>
         </li>
         <li>
-          <a href="company" tabindex="0">会社概要</a>
+          <a href="/company/" tabindex="0">会社概要</a>
         </li>
         <li>
-          <a href=".fk-top-contact" tabindex="0">お問い合わせ</a>
+          <a href="/#info-section" data-target="info-section" tabindex="0">お問い合わせ</a>
         </li>
         
       </ul>

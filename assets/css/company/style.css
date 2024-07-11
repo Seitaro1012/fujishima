@@ -20,7 +20,6 @@
 
 .fk-companyTable dd {
   width: 85%;
-  min-height: 8.59vw;
   padding: 0 0 1.04vw 1.04vw;
 }
 
@@ -30,7 +29,7 @@
 
 @media screen and (min-width: 768px) {
   .fk-companyTable dd {
-    min-height: 10.31rem;
+    min-height: 6.25rem;
     padding: 0 0 1.25rem 1.25rem;
   }
 
@@ -41,7 +40,7 @@
 
 @media screen and (max-width: 767px) {
   .fk-companyTable dd {
-    min-height: 10.31rem;
+    min-height: 6.25rem;
     padding: 0 0 1.25rem 1.25rem;
   }
 
