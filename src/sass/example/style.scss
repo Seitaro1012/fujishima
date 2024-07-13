@@ -1,10 +1,6 @@
 @use '../config' as *;
 @use '../mixin' as *;
 
-.company .fk-mainContent{
-  background: url('/assets/images/object/bg_obje01.svg') no-repeat right 3.5%/62%, url('/assets/images/object/bg_obje01.svg') no-repeat left 37%/62%,url('/assets/images/object/bg_obje01.svg') no-repeat right 74%/62% ;
-}
-
 .fk-example{
   margin-top: vwpc(190);
   padding-bottom: vwpc(96);
@@ -103,4 +99,8 @@
   
   button.more.on-click::after{
   content: "閉じる";
+  }
+
+  .fk-mainContent {
+    padding-bottom: 0;
   }
