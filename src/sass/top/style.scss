@@ -39,12 +39,15 @@
     &__title{
       width: fit-content;
       margin-left: auto;
-      font-size: vwpc(58);
+      font-size: vwpc(55);
       font-weight: 700;
       padding-right: 0.7em;
       @include mq-max(){
         font-size: rem(58);
 
+      }
+      @include mq-down {
+        font-size: vw(20);
       }
     }
     &__body{
@@ -239,7 +242,7 @@
   }
   @include mq-down(){
     margin-top: vw(88);
-    padding-bottom: vw(112);
+    padding-bottom: vw(50);
 
   }
   .fk-headingWrap{
@@ -424,7 +427,6 @@
     @include mq-down(){
       width: 100%;
       padding-top:vw(64);
-      padding-bottom: vw(24);
       .fk-text-1{
         font-size: vw(16);
       }
@@ -494,7 +496,7 @@
       gap: rem(50);
     }
     @include mq-down(){
-      padding: vw(18) 0 vw(64) vw(76);
+      padding: vw(25) 0 vw(64) vw(45);
       gap: vw(16);
     }
     &:before{

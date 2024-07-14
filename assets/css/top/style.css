@@ -26,7 +26,7 @@
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
-  font-size: 3.02vw;
+  font-size: 2.86vw;
   font-weight: 700;
   padding-right: 0.7em;
 }
@@ -735,6 +735,10 @@
     height: 142.49vw;
   }
 
+  .fk-top-mvContent__title {
+    font-size: 5.09vw;
+  }
+
   .fk-top-mvContent__body {
     width: 81.42vw;
     padding: 6.11vw;
@@ -809,7 +813,7 @@
 
   .fk-top-example {
     margin-top: 22.39vw;
-    padding-bottom: 28.5vw;
+    padding-bottom: 12.72vw;
   }
 
   .fk-top-example .fk-headingWrap {
@@ -875,7 +879,6 @@
   .fk-top-contact__text {
     width: 100%;
     padding-top: 16.28vw;
-    padding-bottom: 6.11vw;
   }
 
   .fk-top-contact__text .fk-text-1 {
@@ -897,7 +900,7 @@
   }
 
   .fk-top-contact__address {
-    padding: 4.58vw 0 16.28vw 19.34vw;
+    padding: 6.36vw 0 16.28vw 11.45vw;
     gap: 4.07vw;
   }
 
