@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 
 /* Reset box-model and set borders */
@@ -797,6 +799,34 @@ body.js-overlay {
   margin-right: calc(50% - 50vw);
 }
 
+/* オブジェクトフェードインのスタイル*/
+
+.fadeIn {
+  opacity: 0;
+  /* 初期状態を非表示に */
+  -webkit-transition: opacity 1.2s ease;
+  transition: opacity 1.2s ease;
+  /* アニメーション設定 */
+}
+
+.fadeIn.is-active {
+  opacity: 1;
+  /* フェードイン完了状態の透明度 */
+}
+
+.openFadeIn {
+  opacity: 0;
+  /* 初期状態を透明にする */
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+  /* アニメーション設定 */
+}
+
+.openFadeIn.is-active {
+  opacity: 1;
+  /* フェードイン完了状態の透明度 */
+}
+
 /*--------
 heading
 ---------*/
@@ -907,6 +937,12 @@ button
   width: 1.88vw;
   height: 2.08vw;
   margin-right: 0.1vw;
+}
+
+.fade-in-element {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .hide {
