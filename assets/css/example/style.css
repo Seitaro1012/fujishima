@@ -44,6 +44,8 @@
 .fk-example__list :hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+  height: auto;
+  width: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -137,6 +139,10 @@ button.more.on-click::after {
     flex-basis: calc((100% - 8.14vw) * 0.3333);
     height: 50.89vw;
     margin-top: 20px;
+  }
+
+  .reform_example {
+    padding-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

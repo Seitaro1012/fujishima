@@ -65,6 +65,8 @@
     }
     :hover{
       transform: scale(1.2);
+      height: auto;
+      width: 100%;
       transition: all 0.5s;
     }
   }
@@ -103,4 +105,10 @@
 
   .fk-mainContent {
     padding-bottom: 0;
+  }
+
+  .reform_example {
+    @include mq-down {
+      padding-bottom: 30px;
+    }
   }

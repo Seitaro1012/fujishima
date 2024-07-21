@@ -12,7 +12,7 @@ const gu_header = `
       <a href="/greeting/" tabindex="0">ご挨拶</a>
     </li>
     <li>
-      <a href="/example/" tabindex="0">施工事例</a>
+      <a href="/example/" tabindex="0">施工例</a>
     </li>
     <li>
       <a href="/company/" tabindex="0">会社概要</a>
@@ -35,7 +35,7 @@ const gu_header = `
           <a href="/greeting/" tabindex="0">ご挨拶</a>
         </li>
         <li>
-          <a href="/example/" tabindex="0">施工事例</a>
+          <a href="/example/" tabindex="0">施工例</a>
         </li>
         <li>
           <a href="/company/" tabindex="0">会社概要</a>
@@ -86,7 +86,7 @@ const gu_footer = `
           <a href="/greeting/" tabindex="0">ご挨拶</a>
         </li>
         <li>
-          <a href="/example/" tabindex="0">施行事例</a>
+          <a href="/example/" tabindex="0">施行例</a>
         </li>
         <li>
           <a href="/company/" tabindex="0">会社概要</a>

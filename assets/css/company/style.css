@@ -1,5 +1,5 @@
 .company .fk-mainContent {
-  background: url("/assets/images/object/bg_obje01.svg") no-repeat right 3.5%/62%, url("/assets/images/object/bg_obje01.svg") no-repeat left 37%/62%, url("/assets/images/object/bg_obje01.svg") no-repeat right 74%/62%;
+  background: url("/assets/images/object/bg_obje01.svg") no-repeat left 100%/60%;
 }
 
 .fk-companyTable {
@@ -24,7 +24,7 @@
 }
 
 .fk-section__company-1 {
-  margin-bottom: 10.42vw;
+  margin-bottom: 2.6vw;
 }
 
 .fk-text-2 {
@@ -38,7 +38,7 @@
   }
 
   .fk-section__company-1 {
-    margin-bottom: 12.5rem;
+    margin-bottom: 3.13rem;
   }
 }
 
@@ -49,7 +49,7 @@
   }
 
   .fk-section__company-1 {
-    margin-bottom: 50.89vw;
+    margin-bottom: 12.72vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
