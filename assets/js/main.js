@@ -63,8 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
     
     function reduceStr(str,br){
       this.innerHTML = str.reduce((acc, curr) => {

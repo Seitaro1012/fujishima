@@ -2,7 +2,6 @@
 
 .fk-example {
   margin-top: 9.9vw;
-  padding-bottom: 5vw;
 }
 
 .fk-example .fk-headingWrap {
@@ -88,7 +87,6 @@ button.more.on-click::after {
 @media screen and (min-width: 1920px) {
   .fk-example {
     margin-top: 11.88rem;
-    padding-bottom: 6rem;
   }
 
   .fk-example .fk-headingWrap {
@@ -117,7 +115,6 @@ button.more.on-click::after {
 @media screen and (max-width: 767px) {
   .fk-example {
     margin-top: 22.39vw;
-    padding-bottom: 0vw;
   }
 
   .fk-example .fk-headingWrap {

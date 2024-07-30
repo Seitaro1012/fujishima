@@ -3,14 +3,11 @@
 
 .fk-example{
   margin-top: vwpc(190);
-  padding-bottom: vwpc(96);
   @include mq-max(){
     margin-top: rem(190);
-    padding-bottom: rem(96);
   }
   @include mq-down(){
     margin-top: vw(88);
-    padding-bottom: vw(0);
 
   }
   .fk-headingWrap{

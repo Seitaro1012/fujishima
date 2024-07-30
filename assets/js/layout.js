@@ -47,9 +47,9 @@ const gu_header = `
       </ul>
     </nav>
     <ul class="fk-overlay__headerSnsIcons">
-      <li><a href="tel:0428147770" tabindex="0"><img src="/assets/images/icon_phone.png" alt="__dummy__"></a></li>
-      <li><a href="mailto:k.fujishima7@gmail.com" tabindex="0"><img src="/assets/images/icon_mail.png" alt="__dummy__"></a></li>
-      <li><a href="https://maps.app.goo.gl/SU541CJcujF9QgGe9" tabindex="0"><img src="/assets/images/icon_map.png" alt="__dummy__"></a></li>
+      <li><a href="tel:0428147770" tabindex="0"><img src="/assets/images/icon_phone.png" alt="電話のアイコン"></a></li>
+      <li><a href="mailto:k.fujishima7@gmail.com" tabindex="0"><img src="/assets/images/icon_mail.png" alt="メールのアイコン"></a></li>
+      <li><a href="https://maps.app.goo.gl/SU541CJcujF9QgGe9" tabindex="0"><img src="/assets/images/icon_map.png" alt="グーグルマップのアイコン"></a></li>
     </ul>
     <p class="fk-overlay__headerCompanyName">有限会社&nbsp;藤島建設</p>
     <p class="fk-overlay__headerAddress">〒194-0038 東京都町田市根岸1-5-25<br>TEL / FAX 042-814-7770</p>
@@ -77,9 +77,9 @@ const gu_footer = `
     
     <div class="fk-footer__nav">
       <ul class="fk-footer__navSns">
-        <li><a href="tel:0428147770" tabindex="0"><img src="/assets/images/icon_phone_w.png" alt="__dummy__"></a></li>
-        <li><a href="mailto:k.fujishima7@gmail.com" tabindex="0"><img src="/assets/images/icon_mail_w.png" alt="__dummy__"></a></li>
-        <li><a href="https://maps.app.goo.gl/SU541CJcujF9QgGe9" tabindex="0"><img src="/assets/images/icon_map_w.png" alt="__dummy__"></a></li>
+        <li><a href="tel:0428147770" tabindex="0"><img src="/assets/images/icon_phone_w.png" alt="電話のアイコン"></a></li>
+        <li><a href="mailto:k.fujishima7@gmail.com" tabindex="0"><img src="/assets/images/icon_mail_w.png" alt="メールのアイコン"></a></li>
+        <li><a href="https://maps.app.goo.gl/SU541CJcujF9QgGe9" tabindex="0"><img src="/assets/images/icon_map_w.png" alt="グーグルマップのアイコン"></a></li>
       </ul>
       <ul class="fk-footer__navList">
         <li>
