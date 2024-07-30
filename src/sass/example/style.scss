@@ -50,6 +50,9 @@
       display: flex;
       align-items: center;
       overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.5s;
       @include mq-max(){
         flex-basis: calc((100% - rem(120)) * 0.3333);
         height: 320px;
@@ -59,12 +62,47 @@
         height: vw(200);
         margin-top: 20px;
       }
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        margin: auto;
+        transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+        opacity: 0;
+      }
+      &::before {
+        background: rgba(80, 80, 80, 0.5490196078);
+        width: 100%;
+        height: 100%;
+      }
+      &::after {
+        color: #fff;
+        content: "Click Here";
+        font-size: 22px;
+        font-weight: bold;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        right: 0;
+      }
     }
     :hover{
-      transform: scale(1.2);
-      height: auto;
-      width: 100%;
-      transition: all 0.5s;
+      // transform: scale(1.2);
+      // height: auto;
+      // width: 100%;
+      &::before,
+      &::after{
+        opacity: 1;
+      }
+      img{
+        transform: none;
+      }
     }
   }
 }
@@ -73,39 +111,156 @@
 
 .img-hide{
   display: none;
-  }
+}
   
-  button.more {
-  font-family: "Noto Serif JP", "Noto Sans JP", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  width: 200px;
-  margin: 30px auto;
-  display: block;
-  background-color: #FADA89;
-  padding:10px 15px;
-  border: none;
-  outline: 0;
-  transition: .5s;
-  -erbkit-transition: .5s;
-  }
-   
-  button.more::after {
-  content: "もっと見る";
-  transition: .2s;
-  -erbkit-transition: .2s;
-  }
+button.more {
+font-family: "Noto Serif JP", "Noto Sans JP", sans-serif;
+font-weight: bold;
+text-align: center;
+width: 200px;
+margin: 30px auto;
+display: block;
+background-color: #FADA89;
+padding:10px 15px;
+border: none;
+outline: 0;
+transition: .5s;
+-erbkit-transition: .5s;
+}
   
-  button.more.on-click::after{
-  content: "閉じる";
-  }
+button.more::after {
+content: "もっと見る";
+transition: .2s;
+-erbkit-transition: .2s;
+}
 
-  .fk-mainContent {
-    padding-bottom: 0;
-  }
+button.more.on-click::after{
+content: "閉じる";
+}
 
-  .reform_example {
-    @include mq-down {
-      padding-bottom: 30px;
+.fk-mainContent {
+  padding-bottom: 0;
+}
+
+.reform_example {
+  @include mq-down {
+    padding-bottom: 30px;
+  }
+}
+
+
+.fk-modal {
+  .modal {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    height: 100dvh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    &[data-is-open=false] {
+      pointer-events: none;
+    }
+
+    &__main {
+      background-color: #fff;
+      border-radius: 20px;
+      opacity: 0;
+      position: relative;
+      transform: translateY(15px);
+      transition: opacity .2s ease-out,transform .2s ease-out;
+      // width: 60%;
+      max-width: 55%;
+      // max-height: 80%;
+      @include mq-down(){
+        max-width: 90%;
+      }
+      .bg-transparent {
+        background-color: transparent;
+      }
+    }
+    &[data-is-open=true] .modal__main {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity .05s ease-out .15s,transform .4s cubic-bezier(.09,2.4,.01,1) .15s;
     }
   }
+  .modal__inner {
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    padding: rem(16) rem(16);
+    
+  }
+  .modal__contents {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    // max-height: 800px;
+    overflow-y: hidden;
+  }
+  .modal__image {
+    // max-height: 800px;
+    max-height: 80vh;
+    display: block;
+  }
+
+  .modal__closeButton {
+    
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+    height: 28px;
+    left: -8px;
+    position: absolute;
+    top: -8px;
+    transition: color .2s ease-out;
+    width: 28px;
+    &:hover {
+      background-color: #f4f3f2;
+      &:before {
+        opacity: .75
+      }
+    }
+    &:before {
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><path fill="%23000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>'); 
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 18px;
+      content: "";
+      height: 18px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 18px
+    }
+  }
+
+  .modal__background {
+    background-color: rgba(80, 80, 80, 0.5490196078);
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    opacity: .88;
+    position: fixed;
+    top: 0;
+    transition: opacity .2s ease-out;
+    width: 100%;
+    z-index: 190;
+  }
+
+  .modal[data-is-open=false]+.modal__background {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+
+

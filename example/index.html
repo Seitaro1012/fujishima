@@ -22,6 +22,7 @@
     <title>藤島建設</title>
     <script src="/assets/js/jquery-3.7.1.min.js" defer></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+    <script src="/assets/js/bodyScrollLock.min.js" defer></script>
     <script type="module" src="/assets/js/main.js" defer></script>
     <link rel="icon" type="image/png" href="/assets/images/logo01.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,10 +31,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
-    />
+    /> -->
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/assets/css/example/style.css" />
   </head>
@@ -48,21 +49,21 @@
           </div>
           <div class="fk-example__block">
             <ul class="fk-example__list">
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_1.jpg"
                   alt="新築住宅の施工例1"
                 />
               </li>
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_2.jpg"
                   alt="新築住宅の施工例2"
                 />
               </li>
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_3.jpg"
@@ -73,21 +74,21 @@
           </div>
           <div class="fk-example__block">
             <ul class="fk-example__list">
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_4.jpg"
                   alt="新築住宅の施工例4"
                 />
               </li>
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_5.jpg"
                   alt="新築住宅の施工例5"
                 />
               </li>
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_6.jpg"
@@ -98,7 +99,7 @@
           </div>
           <div class="fk-example__block">
             <ul class="fk-example__list">
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_7.jpg"
@@ -115,21 +116,21 @@
           </div>
           <div class="fk-example__block">
             <ul class="fk-example__list">
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_8.jpg"
                   alt="住宅リフォームの施工例1"
                 />
               </li>
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_9.jpg"
                   alt="住宅リフォームの施工例2"
                 />
               </li>
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_10.JPG"
@@ -140,7 +141,7 @@
           </div>
           <div class="fk-example__block">
             <ul class="fk-example__list">
-              <li class="fk-example__listItem">
+              <li class="fk-example__listItem js-popup">
                 <img
                   class="fk-example-pic"
                   src="/assets/images/example/example_11.JPG"
@@ -150,6 +151,19 @@
             </ul>
           </div>
         </section>
+        <div class="fk-modal">
+          <div class="modal" data-is-open="false">
+            <div class="modal__main">
+              <button class="modal__closeButton" type="button"></button>
+              <div class="modal__inner">
+                <div class="modal__contents">
+                  <img class="modal__image" id="modalImage" src="/assets/images/example/example_1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__background"></div>
+        </div>
       </main>
       <div id="fk-footer-js"></div>
     </div>

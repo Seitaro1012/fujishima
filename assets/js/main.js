@@ -129,3 +129,50 @@ $(window).scroll(function() {
 $(document).ready(function() {
   $('.openFadeIn').addClass('is-active');
 });
+
+
+if(document.querySelector('body').classList.contains('example')){
+
+  
+  const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+  const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+  
+  // この要素以外のスクロールをロックする（ここにドロワーメニューやモーダルを指定する）
+  const targetElement = document.querySelector('.fk-modal');
+  
+  
+  const js_popups = document.querySelectorAll('.js-popup');
+  const fk_modal = document.querySelector('.fk-modal .modal');
+  const fk_modalMain = document.querySelector('.fk-modal .modal__main');
+  const fk_modal_img = document.querySelector('.fk-modal .modal .modal__image');
+  const fk_modal_closeButton = document.querySelector('.fk-modal .modal__closeButton');
+  if(js_popups.length > 0){
+    js_popups.forEach(function(el){
+      el.addEventListener('click', function(e){
+        const img_url = el.querySelector('img').getAttribute('src');
+        const img_alt = el.querySelector('img').getAttribute('alt');
+        fk_modal_img.setAttribute('src' , img_url);
+        fk_modal_img.setAttribute('alt' , img_alt);
+        fk_modal.dataset.isOpen = true;
+        // スクロールをロックする
+        disableBodyScroll(targetElement);
+      })
+    })
+  }
+  
+  fk_modalMain.addEventListener('click', function(e){
+    e.stopPropagation();
+
+  })
+  fk_modal.addEventListener('click', function(e){
+    fk_modal.dataset.isOpen = false;
+    // ロックを解除する
+    enableBodyScroll(targetElement);
+  })
+  fk_modal_closeButton.addEventListener('click', function(e){
+    fk_modal.dataset.isOpen = false;
+    // ロックを解除する
+    enableBodyScroll(targetElement);
+  })
+
+};

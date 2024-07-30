@@ -38,15 +38,59 @@
   -ms-flex-align: center;
   align-items: center;
   overflow: hidden;
-}
-
-.fk-example__list :hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  height: auto;
-  width: 100%;
+  position: relative;
+  cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.fk-example__listItem::before,
+.fk-example__listItem::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+  transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+  opacity: 0;
+}
+
+.fk-example__listItem::before {
+  background: rgba(80, 80, 80, 0.5490196078);
+  width: 100%;
+  height: 100%;
+}
+
+.fk-example__listItem::after {
+  color: #fff;
+  content: "Click Here";
+  font-size: 22px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+}
+
+.fk-example__list :hover::before,
+.fk-example__list :hover::after {
+  opacity: 1;
+}
+
+.fk-example__list :hover img {
+  -webkit-transform: none;
+  transform: none;
 }
 
 .img-hide {
@@ -82,6 +126,142 @@ button.more.on-click::after {
 
 .fk-mainContent {
   padding-bottom: 0;
+}
+
+.fk-modal .modal {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.fk-modal .modal[data-is-open=false] {
+  pointer-events: none;
+}
+
+.fk-modal .modal__main {
+  background-color: #fff;
+  border-radius: 20px;
+  opacity: 0;
+  position: relative;
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  max-width: 55%;
+}
+
+.fk-modal .modal__main .bg-transparent {
+  background-color: transparent;
+}
+
+.fk-modal .modal[data-is-open=true] .modal__main {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: opacity 0.05s ease-out 0.15s, -webkit-transform 0.4s cubic-bezier(0.09, 2.4, 0.01, 1) 0.15s;
+  transition: opacity 0.05s ease-out 0.15s, -webkit-transform 0.4s cubic-bezier(0.09, 2.4, 0.01, 1) 0.15s;
+  transition: opacity 0.05s ease-out 0.15s, transform 0.4s cubic-bezier(0.09, 2.4, 0.01, 1) 0.15s;
+  transition: opacity 0.05s ease-out 0.15s, transform 0.4s cubic-bezier(0.09, 2.4, 0.01, 1) 0.15s, -webkit-transform 0.4s cubic-bezier(0.09, 2.4, 0.01, 1) 0.15s;
+}
+
+.fk-modal .modal__inner {
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+.fk-modal .modal__contents {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-y: hidden;
+}
+
+.fk-modal .modal__image {
+  max-height: 80vh;
+  display: block;
+}
+
+.fk-modal .modal__closeButton {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  height: 28px;
+  left: -8px;
+  position: absolute;
+  top: -8px;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  width: 28px;
+}
+
+.fk-modal .modal__closeButton:hover {
+  background-color: #f4f3f2;
+}
+
+.fk-modal .modal__closeButton:hover:before {
+  opacity: 0.75;
+}
+
+.fk-modal .modal__closeButton:before {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><path fill="%23000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  content: "";
+  height: 18px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 18px;
+}
+
+.fk-modal .modal__background {
+  background-color: rgba(80, 80, 80, 0.5490196078);
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  opacity: 0.88;
+  position: fixed;
+  top: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  width: 100%;
+  z-index: 190;
+}
+
+.fk-modal .modal[data-is-open=false] + .modal__background {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 1920px) {
@@ -140,6 +320,10 @@ button.more.on-click::after {
 
   .reform_example {
     padding-bottom: 30px;
+  }
+
+  .fk-modal .modal__main {
+    max-width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */
