@@ -192,7 +192,10 @@ content: "閉じる";
     height: 100%;
     overflow-y: auto;
     width: 100%;
-    padding: rem(16) rem(16);
+    padding: rem(20) rem(20);
+    @include mq-down(){
+      padding: rem(16) rem(16);
+    }
     
   }
   .modal__contents {

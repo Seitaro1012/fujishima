@@ -183,7 +183,7 @@ button.more.on-click::after {
   height: 100%;
   overflow-y: auto;
   width: 100%;
-  padding: 1rem 1rem;
+  padding: 1.25rem 1.25rem;
 }
 
 .fk-modal .modal__contents {
@@ -324,6 +324,10 @@ button.more.on-click::after {
 
   .fk-modal .modal__main {
     max-width: 90%;
+  }
+
+  .fk-modal .modal__inner {
+    padding: 1rem 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
